@@ -33,28 +33,6 @@ Over many games, even when playing against itself, MENACE converges toward a **p
 
 ---
 
-## Project Structure
-
-MENACE-TicTacToe/
-    src/ # Source files (.cpp)
-        board.cpp
-        matchbox.cpp
-        main/
-             train.cpp
-             play.cpp
-    include/ # Header files (.h)
-            board.h
-            matchbox.h
-    data/ # Saved matchboxes (learning memory)
-         tttdb_O.txt
-         tttdb_X.txt
-    Makefile # Build instructions
-    play.exe # Play against MENACE
-    train.exe # Run self-training
-    README.md
-
----
-
 ## Building & Running
 
 ### Prerequisites
@@ -92,10 +70,10 @@ As it plays more games:
 You can visualize progress by inspecting the data/tttdb_O.txt (or data/tttdb_X.txt) file as the agent trains.
 
 ### Key Functions
-getComputerMove() => Chooses a move based on current bead weights (stochastic)
-getComputerMoveDeterminist() => Chooses the best move deterministically
-updateLearning() => Adjusts beads after each game based on outcome
-loadFromFile() & saveToFile() => Handles persistent memory of all matchboxes
+- getComputerMove() => Chooses a move based on current bead weights (stochastic)
+- getComputerMoveDeterminist() => Chooses the best move deterministically.
+- updateLearning() => Adjusts beads after each game based on outcome.
+- loadFromFile() & saveToFile() => Handles persistent memory of all matchboxes.
 
 ## Author
 ### Jun Curi
